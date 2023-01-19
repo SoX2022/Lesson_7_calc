@@ -1,13 +1,23 @@
 import functions
+import logger
 
 
-def FunctionLogic(operation, x, y):
+def FunctionLogic(x, operation, y):
+    logger.Log('controller.ClickButtom_v2', 'operation_logic.FunctionLogic', [x, operation, y])
     if operation == '+':
-        return functions.PlusFunction(x, y)
+        result = functions.PlusFunction(x, y)
+        logger.Log('operation_logic.FunctionLogic', 'controller.ClickButtom_v2', result)
+        return result
     elif operation == '-':
-        return functions.MinusFunction(x, y)
+        result = functions.MinusFunction(x, y)
+        logger.Log('operation_logic.FunctionLogic', 'controller.ClickButtom_v2', result)
+        return result
     elif operation == '*':
-        return functions.MultiplicationFunction(x, y)
+        result = functions.MultiplicationFunction(x, y)
+        logger.Log('operation_logic.FunctionLogic', 'controller.ClickButtom_v2', result)
+        return result
     elif operation == '/':
-        return functions.DivisionFunction(x, y)
+        result = functions.DivisionFunction(x, y)
+        logger.Log('operation_logic.FunctionLogic', 'controller.ClickButtom_v2', result)
+        return result
 
