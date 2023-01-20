@@ -1,4 +1,4 @@
 import controller
 
 
-controller.ClickButtom_v2()
+controller.ClickButton_v2()
